@@ -1,0 +1,283 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Mons_Rg';
+  color: #808080;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: var(--ligth_gray);
+}
+
+.container {
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+:root {
+  --gray: #E1E1E1;
+  --ligth_gray: #F1F1F1;
+  --dark_gray: #323232;
+  --white: #FFF;
+  --black: #000;
+
+}
+
+/* ------Header-------- */
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+  position: relative;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 179px;
+}
+
+.header__active {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: row;
+  gap: 42px;
+}
+
+.header__nav::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--black);
+  bottom: -22px;
+  position: absolute;
+}
+
+.header__logo {
+  color: var(--dark_gray);
+  font-family: 'Mons_Bd';
+  font-size: 32px;
+  line-height: 23px;
+  /* 71.875% */
+  text-transform: uppercase;
+}
+
+/* ------Products Section------- */
+.products {
+  margin-top: 52px;
+}
+
+.product__list {
+  display: grid;
+  grid-template-columns: 0.42fr 0.58fr;
+  gap: 25px;
+  grid-auto-rows: minmax(294px, auto);
+}
+
+.product__item {
+  box-shadow: 10px 10px 12px 0px rgba(225, 225, 225, 0.75);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-radius: 10px;
+  background: #E1E1E1;
+  grid-auto-flow: column;
+}
+
+.product__item:nth-child(2) {
+  grid-row: span 2;
+}
+
+.product__item-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+}
+
+.product__item-pic {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.section__item-model {
+  color: var(--black);
+  font-family: 'Mons_Bd';
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.preview .product__item-description {
+  gap: 30px;
+}
+
+.preview .section__item-model {
+  font-size: 22px;
+}
+
+.section__item-text {
+  color: var(--dark_gray);
+  font-size: 16px;
+}
+
+/* ------before/after Selectors--------- */
+.sale50,
+.sale20,
+.new,
+.sale15,
+.sale30,
+.sale10 {
+  position: relative;
+}
+
+.sale50::before {
+  content: '50%';
+}
+
+.sale20::before {
+  content: '20%';
+}
+
+.new::before {
+  content: 'NEW';
+}
+
+.sale15::before {
+  content: '15%';
+}
+
+.sale30::before {
+  content: '30%';
+}
+
+.sale10::before {
+  content: '10%';
+}
+
+
+.sale50::before,
+.sale20::before,
+.new::before,
+.sale15::before,
+.sale30::before,
+.sale10::before {
+  border-radius: 10px;
+  background: var(--dark_gray);
+  max-width: 120px;
+  width: 100%;
+  padding: 11px 0;
+  color: var(--white);
+  text-align: center;
+  font-size: 20px;
+  text-transform: capitalize;
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  z-index: 1;
+}
+
+
+
+
+/* ------------------------- */
+/* ----------TopSales Section--------- */
+.topsales {
+  margin: 60px 0;
+}
+
+.section__title {
+  color: var(--black);
+  font-size: 30px;
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+}
+
+
+.section__title::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--black);
+  bottom: -22px;
+  position: absolute;
+}
+
+.topsales__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 24px;
+  row-gap: 40px;
+  grid-auto-rows: minmax(485px, auto);
+}
+
+.topsales__box {
+  padding-top: 62px;
+}
+
+.topsales__item {
+  box-shadow: 10px 10px 12px 0px rgba(225, 225, 225, 0.75);
+  padding-top: 72px;
+  padding-bottom: 39px;
+  border-radius: 10px;
+  background: #E1E1E1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+.topsales__item-active {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+}
+
+.topsales__item-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.topsales__item-active {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-end;
+}
+
+.topsales__morelink {
+  display: block;
+  color: var(--dark_gray);
+  font-size: 30px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+/* ------------------ */
